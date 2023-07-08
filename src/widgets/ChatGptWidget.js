@@ -25,7 +25,10 @@ export default function ChatGptWidget() {
           body: JSON.stringify({
             model: "gpt-3.5-turbo",
             max_tokens: 100,
-            messages: [{ role: "user", content: inputText }],
+            messages: [
+              {role: "system", content: "You are a helpful assistant. Keep your replies within 100 words."},
+              { role: "user", content: inputText },
+            ],
           }),
         }
       );
