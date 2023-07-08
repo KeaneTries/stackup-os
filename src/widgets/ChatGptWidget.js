@@ -26,8 +26,8 @@ export default function ChatGptWidget() {
             model: "gpt-3.5-turbo",
             max_tokens: 100,
             messages: [
-              {role: "system", content: "You are a helpful assistant. Keep your replies within 100 words."},
-              { role: "user", content: inputText },
+              {role: "system", content: "You are a helpful assistant. Keep your replies within 80 words."},
+              { role: "user", content: `${inputText}. Keep your reply within 80 words.`  },
             ],
           }),
         }
